@@ -1,0 +1,7 @@
+{
+    "url": "localhost",
+    "deploy": [
+        "ls -la",
+        "ssh root@test.com"
+    ]
+}
