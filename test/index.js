@@ -11,3 +11,4 @@ deployer.initConfig({
 });
 
 console.log(deployer);
+deployer.task("123");
