@@ -1,0 +1,9 @@
+[
+    {
+        "url": "localhost",
+        "deploy": [
+            "ls -la",
+            "mkdir test"
+        ]
+    }
+]
