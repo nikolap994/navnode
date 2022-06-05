@@ -1,12 +1,14 @@
-#!/usr/bin/env node
+const deployer = require("./navis");
 
-const initConfig = (config) => {
-  console.log(config);
+const config = {
+  staging: {
+    server: "nikola_server@192.168.0.16",
+    path: "/home/nikola_server/test/Cryptographic-JSON-Database",
+    branch: "main",
+    tasks: ["git status", "git pull", "ls -la", "pwd"],
+  },
 };
 
-const task = (task) => {
-  console.log(task);
-};
+const Navis = new deployer(config, "staging");
 
-exports.initConfig = initConfig;
-exports.task = task;
+Navis.execute();
