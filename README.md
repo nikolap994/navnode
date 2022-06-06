@@ -13,6 +13,9 @@ It is easy to deploy or to automate tasks on your remote servers or in local env
 - Define tasks with built in commands or use your own custom ones.
 
 ### Usage
+Install using npm:
+`npm install -g navis`
+
 
 Example of the deployment file (`navis-depolyment.js`).
 Create file `navis-depolyment.js` and add following:
@@ -47,3 +50,5 @@ exports.environments = environments;
 // If custom commands are defined, extend needs to be exported as well.
 exports.extend = extend;
 ```
+
+Run from command line `navis --env staging`
