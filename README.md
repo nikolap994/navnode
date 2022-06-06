@@ -14,7 +14,8 @@ It is easy to deploy or to automate tasks on your remote servers or in local env
 
 ### Usage
 
-Example of the deployment file:
+Example of the deployment file (`navis-depolyment.js`).
+Create file `navis-depolyment.js` and add following:
 ```js
 // environments variable requires following objects:
 // - server - username@ip of the targeted server
