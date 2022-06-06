@@ -1,11 +1,11 @@
-# Automation and deployment tool written in Node.js
+# Navnode 
 
 Universal deployment and automation tool.
 
-![93145e85-f0b2-4690-8682-91fe60eade10](https://user-images.githubusercontent.com/25112021/172065905-576bc963-8480-4c03-a403-eee1785f6b16.png)
+![93145e85-f0b2-4690-8682-91fe60eade10](https://repository-images.githubusercontent.com/499848268/f5f5c077-3243-44cc-afc9-f400eed44e49)
 
-Navis is automation and deployment tool. 
-Navis is alternation to other builds, such as Capistano or Fabric.
+Navnode is automation and deployment tool. 
+Navnode is alternation to other builds, such as Capistano or Fabric.
 It is easy to deploy or to automate tasks on your remote servers or in local environment.
 
 ### List of features are as follows:
@@ -14,11 +14,11 @@ It is easy to deploy or to automate tasks on your remote servers or in local env
 
 ### Usage
 Install using npm:
-`npm install -g navis`
+`npm install -g navnode`
 
 
-Example of the deployment file (`navis-depolyment.js`).
-Create file `navis-depolyment.js` and add following:
+Example of the deployment file (`navnode-depolyment.js`).
+Create file `navnode-depolyment.js` and add following:
 ```js
 // environments variable requires following objects:
 // - server - username@ip of the targeted server
@@ -33,12 +33,12 @@ const environments = {
       "git pull",
       "ls -la",
       "pwd",
-      "extendTask --navis_extend",
+      "extendTask --navnode_extend",
     ],
   },
 };
 
-// Commands can be executed by appending --navis_extend to function call
+// Commands can be executed by appending --navnode_extend to function call
 // function needs to be defined in the extend variable
 const extend = {
   extendTask: () => console.log("method was executed"),
@@ -51,4 +51,4 @@ exports.environments = environments;
 exports.extend = extend;
 ```
 
-Run from command line `navis --env staging`
+Run from command line `navnode --env staging`

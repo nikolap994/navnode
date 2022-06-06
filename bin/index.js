@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const colors = require("colors");
-const navis = require("../lib/navis");
+const navnode = require("../lib/navnode");
 
 var arguments = process.argv.splice(2);
 var env = null;
@@ -11,10 +11,10 @@ if (arguments[0] == "--env") {
 }
 
 if (env) {
-  console.log(colors.blue("Navis deploying to " + env));
-  const deployment = navis.deploy(env);
+  console.log(colors.blue("Navnode deploying to " + env));
+  const deployment = navnode.deploy(env);
   if (typeof deployment !== "undefined") {
-    console.log(colors.blue(navis.deploy(env)));
+    console.log(colors.blue(navnode.deploy(env)));
   }
 } else {
   console.log(colors.red("Missing environment"));

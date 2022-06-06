@@ -1,9 +1,9 @@
 {
-  "name": "deploy-to-remote",
+  "name": "navnode",
   "version": "1.0.0",
-  "main": "./lib/navis.js",
+  "main": "./lib/navnode.js",
   "bin": {
-    "navis": "bin/index.js"
+    "navnode": "bin/index.js"
   },
   "dependencies": {
     "colors": "^1.2.1",
