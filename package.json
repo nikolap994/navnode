@@ -1,12 +1,35 @@
 {
-    "name": "navis",
-    "version": "1.0.0",
-    "main": "./lib/navis.js",
-    "bin": {
-        "navis": "./bin/index.js"
-    },
-    "dependencies": {
-        "colors": "^1.2.1",
-        "lodash": "^4.17.13"
-    }
+  "name": "navis",
+  "version": "1.0.0",
+  "main": "./lib/navis.js",
+  "bin": {
+    "navis": "bin/index.js"
+  },
+  "dependencies": {
+    "colors": "^1.2.1",
+    "lodash": "^4.17.13"
+  },
+  "description": "Universal deployment and automation tool.",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolap994/deployer-nodejs.git"
+  },
+  "keywords": [
+    "tools",
+    "deployment",
+    "CLI"
+  ],
+  "author": "Nikola Pavlović",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikolap994/deployer-nodejs/issues"
+  },
+  "homepage": "https://github.com/nikolap994/deployer-nodejs#readme"
 }
