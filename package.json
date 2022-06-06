@@ -1,5 +1,5 @@
 {
-  "name": "navis",
+  "name": "deploy-to-remote",
   "version": "1.0.0",
   "main": "./lib/navis.js",
   "bin": {

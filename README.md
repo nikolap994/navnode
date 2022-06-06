@@ -1,4 +1,4 @@
-# Navis 
+# Automation and deployment tool written in Node.js
 
 Universal deployment and automation tool.
 
