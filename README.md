@@ -26,17 +26,24 @@ Create file `navnode-depolyment.js` and add following:
 // - tasks - tasks that will be run
 const environments = {
   staging: {
-    server: "nikola_server@192.168.0.16",
+    user: "nikola_server",
+    server: "192.168.0.16",
     path: "/home/nikola_server/test/Cryptographic-JSON-Database",
-    tasks: [
-      "git status",
-      "git pull",
-      "ls -la",
-      "pwd",
-      "extendTask --navnode_extend",
-    ],
   },
 };
+
+// List all Tasks that can be called from the cli
+const tasks = {
+	status: {
+		task: ['git status']
+	},
+	current_path: {
+		task: ['pwd']
+	},
+	list_dirs: {
+		task: ['ls -la']
+	}
+}
 
 // Commands can be executed by appending --navnode_extend to function call
 // function needs to be defined in the extend variable
@@ -51,4 +58,4 @@ exports.environments = environments;
 exports.extend = extend;
 ```
 
-Run from command line `navnode --env staging`
+Run from command line `navnode staging:status`
