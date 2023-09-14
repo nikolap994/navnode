@@ -17,8 +17,8 @@ Install using npm:
 `npm install -g navnode`
 
 
-Example of the deployment file (`navnode-depolyment.js`).
-Create file `navnode-depolyment.js` and add following:
+Example of the deployment file (`navnode-deployment.js`).
+Create file `navnode-deployment.js` and add following:
 ```js
 // environments variable requires following objects:
 // - server - username@ip of the targeted server
