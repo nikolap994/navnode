@@ -4,7 +4,6 @@ Universal deployment and automation tool.
 
 ![93145e85-f0b2-4690-8682-91fe60eade10](https://repository-images.githubusercontent.com/499848268/f5f5c077-3243-44cc-afc9-f400eed44e49)
 
-Navnode is automation and deployment tool. 
 Navnode is alternation to other builds, such as Capistano or Fabric.
 It is easy to deploy or to automate tasks on your remote servers or in local environment.
 
