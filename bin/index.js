@@ -3,10 +3,14 @@
 const colors = require("colors");
 const navnode = require("../lib/navnode");
 
+/**
+ * The main entry point for the Navnode command-line utility.
+ */
 var arguments = process.argv.splice(2);
 var env = null;
 var task = null;
 
+// Parse the provided arguments to determine the environment and task.
 env = arguments[0].split(':')[0];
 task = arguments[0].split(':')[1];
 
