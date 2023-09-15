@@ -1,28 +1,35 @@
-# Navnode 
+# Navnode: Universal Deployment and Automation Tool
 
-Universal deployment and automation tool.
+![Navnode Logo](https://repository-images.githubusercontent.com/499848268/f5f5c077-3243-44cc-afc9-f400eed44e49)
 
-![93145e85-f0b2-4690-8682-91fe60eade10](https://repository-images.githubusercontent.com/499848268/f5f5c077-3243-44cc-afc9-f400eed44e49)
+## Introduction
 
-Navnode is alternation to other builds, such as Capistano or Fabric.
-It is easy to deploy or to automate tasks on your remote servers or in local environment.
+Navnode is a powerful and versatile deployment and automation tool designed to simplify the process of managing tasks on remote servers or within local environments. Unlike traditional tools like Capistrano or Fabric, Navnode provides an intuitive and flexible way to deploy applications and automate various tasks with ease.
 
-### List of features are as follows:
-- Write your own task using Javascript.
-- Define tasks with built in commands or use your own custom ones.
+## Key Features
 
-### Usage
-Install using npm:
-`npm install -g navnode`
+Navnode offers a range of features to enhance your deployment and automation workflow:
 
+- **Customizable Tasks**: Write your own tasks using JavaScript, allowing you to tailor your automation to specific needs.
 
-Example of the deployment file (`navnode-deployment.js`).
-Create file `navnode-deployment.js` and add following:
-```js
-// environments variable requires following objects:
-// - server - username@ip of the targeted server
-// - path - path of the dir where commands will be executed
-// - tasks - tasks that will be run
+- **Built-in Commands**: Define tasks using built-in commands or create your own custom commands for maximum flexibility.
+
+## Getting Started
+
+To start using Navnode, simply follow these steps:
+
+1. Install Navnode globally using npm:
+
+   ```sh
+   npm install -g navnode
+   ```
+
+2. Create a deployment configuration file, typically named `navnode-deployment.js`, and define your deployment environment and tasks.
+
+Here's an example of a deployment file (`navnode-deployment.js`):
+
+```javascript
+// Define deployment environments
 const environments = {
   staging: {
     user: "nikola_server",
@@ -31,30 +38,45 @@ const environments = {
   },
 };
 
-// List all Tasks that can be called from the cli
+// Define available tasks
 const tasks = {
-	status: {
-		task: ['git status']
-	},
-	current_path: {
-		task: ['pwd']
-	},
-	list_dirs: {
-		task: ['ls -la']
-	}
+  status: {
+    task: ['git status']
+  },
+  current_path: {
+    task: ['pwd']
+  },
+  list_dirs: {
+    task: ['ls -la']
+  }
 }
 
-// Commands can be executed by appending --navnode_extend to function call
-// function needs to be defined in the extend variable
+// Extend Navnode functionality if needed
 const extend = {
-  extendTask: () => console.log("method was executed"),
+  extendTask: () => console.log("Custom method was executed"),
 };
 
-// By default environments needs to be exported.
+// Export environments and extend for Navnode to use
 exports.environments = environments;
-
-// If custom commands are defined, extend needs to be exported as well.
 exports.extend = extend;
+
+// Your deployment configuration is ready!
 ```
 
-Run from command line `navnode staging:status`
+3. Run Navnode from the command line using the following syntax:
+
+   ```sh
+   navnode <environment>:<task>
+   ```
+
+   For example, to check the status of your staging environment, use:
+
+   ```sh
+   navnode staging:status
+   ```
+
+With Navnode, you have the power to streamline your deployment and automation processes, making it easier than ever to manage your projects effectively.
+
+**Note**: If you define custom commands, remember to export the `extend` object as well.
+
+Discover the possibilities with Navnode and take control of your deployment and automation tasks like a pro.
