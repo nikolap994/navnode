@@ -73,7 +73,10 @@ function handleNavnodeCommand(env, task, additionalArgument) {
   if (task === "rsync_pull" || task === "rsync_push") {
     const direction = task === "rsync_pull" ? "from" : "to";
     console.log(colors.blue(`Navnode syncing files ${direction} ${env}`));
-    navnode[`rsync${task.split("_")[1]^}`](env, additionalArgument);
+    
+    const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+    const capitalizedTask = capitalizeFirstLetter(task.split("_")[1]);
+    navnode[`rsync${capitalizedTask}`](env, additionalArgument);
   } else {
     // Handle deployment task
     const deployment = navnode.deploy(env, task);
