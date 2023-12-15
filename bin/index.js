@@ -73,7 +73,7 @@ function handleNavnodeCommand(env, task, additionalArgument) {
   if (task === "rsync_pull" || task === "rsync_push") {
     const direction = task === "rsync_pull" ? "from" : "to";
     console.log(colors.blue(`Navnode syncing files ${direction} ${env}`));
-    navnode[`rsync${(task.split("_")[1]).toUpperCase()}`](env, additionalArgument);
+    navnode[`rsync${task.split("_")[1]^}`](env, additionalArgument);
   } else {
     // Handle deployment task
     const deployment = navnode.deploy(env, task);
