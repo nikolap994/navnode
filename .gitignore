@@ -1,2 +1,4 @@
 node_modules
 navnode-deployment.js
+
+!example/navnode-deployment.js
