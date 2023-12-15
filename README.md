@@ -76,9 +76,19 @@ Navnode empowers you to streamline deployment and automation processes, making p
 
 Explore the possibilities with Navnode and take control of your deployment and automation tasks like a professional.
 
-## Features
+## Built-in commands:
 
 Navnode enhances automation with additional commands, making it accessible for everyone. Here is a list of commands and instructions on how to use them:
+
+### Initialization
+
+To set up a new Navnode project, use the following command:
+
+```sh
+navnode init
+```
+
+This command automates the creation of a boilerplate `navnode-deployment.js` file, providing you with a starting point for defining deployment environments and tasks. Streamline your project setup process with Navnode's initialization command.
 
 ### Rsync Pull Command
 ```sh
