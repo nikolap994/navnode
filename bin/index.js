@@ -65,7 +65,7 @@ function handleNavnodeCommand(env, task, additionalArgument) {
 
   // Display information based on the task
   if (task.includes("deploy")) {
-    console.log(colors.blue(`Navnode deploying to ${env}`));
+    console.log(colors.blue(figlet.textSync("Deploying to " + env + "...")));
   } else if (!task.includes("rsync")) {
     console.log(colors.blue(`Navnode executing ${env}:${task}`));
   }
