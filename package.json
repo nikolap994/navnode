@@ -1,6 +1,6 @@
 {
   "name": "navnode",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "main": "./lib/navnode.js",
   "bin": {
     "navnode": "bin/index.js"
