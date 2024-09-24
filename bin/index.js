@@ -3,6 +3,7 @@
 // Import required modules
 const colors = require("colors");
 const navnode = require("../lib/navnode");
+const figlet = require("figlet");
 const path = require("path");
 
 /**
